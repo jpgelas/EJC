@@ -1,4 +1,4 @@
-### Étude de la consommation énergétique des Smart contracts dans la blockchain EthereumFlux 
+### Étude de la consommation énergétique des Smart contracts dans la blockchain Ethereum
 #### Jean-Patrick Gelas et Hayri Acar
 ##### Université Lyon 1/INRIA/ENS Lyon
 
