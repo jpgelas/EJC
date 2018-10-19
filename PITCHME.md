@@ -2,7 +2,18 @@
 #### Jean-Patrick Gelas et Hayri Acar
 ##### Université Lyon 1/INRIA/ENS Lyon
 
-#### Entretien Jacques Cartier, 12-13 novembre 2018, ENS Lyon
+#### Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
+
+---
+@transition[none]
+
+@snap[north-east]
+who am i
+@snapend
+
+  - Associate Prof
+  - Associate Prof
+  - Associate Prof
 
 ---
 
@@ -24,4 +35,3 @@
 ### L’infrastructure Ethereum
 
 - 25000 nœuds contre 7000 pour Bitcoin (31/5/2017)
-
