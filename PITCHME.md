@@ -25,12 +25,14 @@
 
 ### Agenda
 
-On ne parlera pas de
+On ne parlera pas de ...
 
+@ul
  - Algorithmes de consensus (PoW, PoS, ...)
  - Minage	
  - Merkle trees
  - Comment devenir un crypto millionaire ! :-)
+@ulend
  
 ---
 
@@ -60,8 +62,13 @@ On ne parlera pas de
 
 25000 nœuds contre 7000 pour Bitcoin (31/5/2017)
 <br/>
-![World](images/eth1.jpg) ![Europe](images/eth2.jpg)
+@snap[west span-50]
+![USA](images/eth1.jpg) 
+@snapend
 
+@snap[east span-50]
+![Europe](images/eth2.jpg)
+@snapend
 
 
 --- 
