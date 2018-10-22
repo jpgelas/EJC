@@ -1,8 +1,8 @@
 ### Étude de la consommation énergétique des Smart contracts dans la blockchain Ethereum
-#### Jean-Patrick Gelas, Hayri Acar, Hind Benfenatki
+##### Jean-Patrick Gelas, Hayri Acar, Hind Benfenatki
 ##### Université Lyon 1/LIRIS/INRIA/ENS Lyon
 
-#### Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
+##### Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 
 ---
 
@@ -27,32 +27,32 @@
 
 On ne parlera pas de
 
-	- Algorithmes de consensus (PoW, PoS, ...)
-	- Minage	
-	- Merkle trees
-	- Comment devenir un crypto millionaire ! $fa[fa-grin-stars fa-spin]
+ - Algorithmes de consensus (PoW, PoS, ...)
+ - Minage	
+ - Merkle trees
+ - Comment devenir un crypto millionaire ! $fa[fa-grin-stars fa-spin]
 
 ---
 
 ### Objectifs
  
-  - Bref rappels (Blochain, Mineurs, ...)
-  - Introduction aux Smart Contracts de la blockchain Ethereum : 
-	- Création, déploiement, usage, fonctionnement.
-  -  
+ - Bref rappels (Blochain, Mineurs, ...)
+ - Introduction aux Smart Contracts de la blockchain Ethereum : 
+   - Création, déploiement, usage, fonctionnement.
+ -  
 
 ---
 
 ### Rappels
 
-  - Blockchain : Structure de données simple 
-  - La technologie Blockchain : « Base de données » sécurisées et décentralisées. 
-  - Les mineurs :  
-	- génèrent de nouveaux coins (par rétribution), 
-	- vérifient l’intégrité de la blockchain,
-	- ajoutent de nouvelles liste de transaction (des blocs) à la chaine.
+ - Blockchain : Structure de données simple 
+ - La technologie Blockchain : « Base de données » sécurisées et décentralisées. 
+ - Les mineurs :  
+   - génèrent de nouveaux coins (par rétribution), 
+   - vérifient l’intégrité de la blockchain,
+   - ajoutent de nouvelles liste de transaction (des blocs) à la chaine.
 
-  - Mining ether = Securing the network = Verifying computation
+ - Mining ether = Securing the network = Verifying computation
 
 ---
 
