@@ -7,7 +7,7 @@
 ---
 
 ### $ who am i
-
+<br><br>
 ```JSON
 {
 	"first_name" : "Jean-Patrick",
@@ -62,10 +62,12 @@ On ne parlera pas de ...
 
 @snap[west ethermap]
 ![USA](images/eth1.jpg)
+USA
 @snapend
 
 @snap[east ethermap]
 ![Europe](images/eth2.jpg)
+Europe
 @snapend
 
 --- 
