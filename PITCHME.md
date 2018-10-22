@@ -1,7 +1,8 @@
 ### Étude de la consommation énergétique des Smart contracts dans la blockchain Ethereum
+<br>
 ##### Jean-Patrick Gelas, Hayri Acar, Hind Benfenatki
 ##### Université Lyon 1/LIRIS/INRIA/ENS Lyon
-
+<br>
 ##### Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 
 ---
@@ -41,7 +42,7 @@ On ne parlera pas de ...
  - Bref rappels (Blochain, Mineurs, ...)
  - Introduction aux Smart Contracts de la blockchain Ethereum : 
    - Création, déploiement, usage, fonctionnement.
- -  
+ 
 
 ---
 
@@ -61,12 +62,14 @@ On ne parlera pas de ...
 25000 nœuds contre 7000 pour Bitcoin (31/5/2017)
 
 @snap[west ethermap]
-![USA](images/eth1.jpg)<br>
+![USA](images/eth1.jpg)
+<br>
 USA
 @snapend
 
 @snap[east ethermap]
-![Europe](images/eth2.jpg)<br>
+![Europe](images/eth2.jpg)
+<br>
 Europe
 @snapend
 
