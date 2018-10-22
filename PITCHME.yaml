@@ -1,2 +1,8 @@
+published : false
+layout : top
 slide-number: true
+footnote : "Entretiens Jacques Cartier - Lyon 2018"
+theme-override : PITCHME.css
 
+#logo : logo.png
+#logo-position : top-right
