@@ -58,8 +58,9 @@ On ne parlera pas de
 
 ### L’infrastructure Ethereum
 
-- 25000 nœuds contre 7000 pour Bitcoin (31/5/2017)
-
+25000 nœuds contre 7000 pour Bitcoin (31/5/2017)
+<br/>
+![World](images/eth1.jpg) ![Europe](images/eth2.jpg)
 
 
 
