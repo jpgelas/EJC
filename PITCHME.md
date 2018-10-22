@@ -73,8 +73,8 @@ USA
 Europe
 @snapend
 
-@snap[south span-100]
-@size[0.5em](Source: https://twitter.com/peter_szilagyi/status/887272506914213888 (18/07/2017))
+@snap[south-west span-100]
+@size[0.5em](Source: https://twitter.com/peter_szilagyi/status/887272506914213888 \(18/07/2017\))
 @snapend
 
 --- 
