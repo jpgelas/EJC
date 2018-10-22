@@ -30,7 +30,7 @@ On ne parlera pas de
  - Algorithmes de consensus (PoW, PoS, ...)
  - Minage	
  - Merkle trees
- - Comment devenir un crypto millionaire ! $fa[grin-stars fa-spin]
+ - Comment devenir un crypto millionaire ! @fa[grin-stars fa-spin]
 
 ---
 
