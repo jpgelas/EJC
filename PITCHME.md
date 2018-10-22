@@ -1,33 +1,57 @@
 ### Étude de la consommation énergétique des Smart contracts dans la blockchain Ethereum
-#### Jean-Patrick Gelas et Hayri Acar
-##### Université Lyon 1/INRIA/ENS Lyon
+#### Jean-Patrick Gelas, Hayri Acar, Hind Benfenatki
+##### Université Lyon 1/LIRIS/INRIA/ENS Lyon
 
 #### Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 
 ---
-@transition[none]
 
-@snap[north-east]
-who am i
-@snapend
+### $ who am i
 
-  - Associate Prof
-  - Associate Prof
-  - Associate Prof
+```JSON
+{
+	"first_name" : "Jean-Patrick",
+	"last_name" : "Gelas",
+	"job" : "Assistant Professor",
+	"locations" : [ "Université Claude Bernard - Lyon 1",
+			"Avalon/INRIA/ENS Lyon" ],
+	"github" : "https://github.com/jpgelas",
+	"url" : "https://perso.univ-lyon1.fr/jean-patrick.gelas",
+	"email" : "jean-patrick.gelas@univ-lyon1.fr"
+}
+```
 
 ---
 
-### Objectifs de la présentation
+### Agenda
 
-- Pas de rappels sur ce qu’est une blockchain.
-- On ne parlera pas de minage (PoW, PoS,…)
-- Ni de Merkle trees
-- Encore moins comment devenir un crypto millionaire 
-- On se concentre seulement sur les Smart contracts de la blockchain Ethereum : 
-  - Création, déploiement, usage, fonctionnement.
-- Rappels :
-  - Blockchain : « Base de données » sécurisées et décentralisées. 
-  - Les mineurs :  génèrent de nouveaux coins (par rétribution), vérifient l’intégrité de la blockchain, et ajoutent de nouvelles liste de transaction (des blocs) à la chaine.
+On ne parlera pas de
+
+	- Algorithmes de consensus (PoW, PoS, ...)
+	- Minage	
+	- Merkle trees
+	- Comment devenir un crypto millionaire ! $fa[fa-grin-stars fa-spin]
+
+---
+
+### Objectifs
+ 
+  - Bref rappels (Blochain, Mineurs, ...)
+  - Introduction aux Smart Contracts de la blockchain Ethereum : 
+	- Création, déploiement, usage, fonctionnement.
+  -  
+
+---
+
+### Rappels
+
+  - Blockchain : Structure de données simple 
+  - La technologie Blockchain : « Base de données » sécurisées et décentralisées. 
+  - Les mineurs :  
+	- génèrent de nouveaux coins (par rétribution), 
+	- vérifient l’intégrité de la blockchain,
+	- ajoutent de nouvelles liste de transaction (des blocs) à la chaine.
+
   - Mining ether = Securing the network = Verifying computation
 
 ---
@@ -35,3 +59,19 @@ who am i
 ### L’infrastructure Ethereum
 
 - 25000 nœuds contre 7000 pour Bitcoin (31/5/2017)
+
+
+
+
+--- 
+
+### Questions ?
+
+Cette présentation est disponible sur https://gitpitch.com/jpgelas/EJC
+
+
+
+
+
+
+
