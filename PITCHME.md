@@ -61,12 +61,12 @@ On ne parlera pas de ...
 25000 nœuds contre 7000 pour Bitcoin (31/5/2017)
 
 @snap[west ethermap]
-![USA](images/eth1.jpg)
+![USA](images/eth1.jpg)<br>
 USA
 @snapend
 
 @snap[east ethermap]
-![Europe](images/eth2.jpg)
+![Europe](images/eth2.jpg)<br>
 Europe
 @snapend
 
