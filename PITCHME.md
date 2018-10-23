@@ -1,9 +1,10 @@
 ### Étude de la consommation énergétique des Smart contracts dans la blockchain Ethereum
 <br>
-##### Jean-Patrick Gelas, Hayri Acar, Hind Benfenatki
-##### Université Lyon 1/LIRIS/INRIA/ENS Lyon
+Jean-Patrick Gelas, Hayri Acar, Hind Benfenatki
 <br>
-##### Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
+Université Lyon 1/LIRIS/INRIA/ENS Lyon
+<br>
+Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 
 ---
 
@@ -55,6 +56,7 @@ On ne parlera pas de ...
    - vérifient l’intégrité de la blockchain,
    - ajoutent de nouvelles liste de transaction (des blocs) à la chaine.
 
+Note:
  - Mining ether = Securing the network = Verifying computation
 
 ---
@@ -91,7 +93,7 @@ Note:
  
 ---
 
-### Smart Contract (suite)
+### Smart Contract @size[0.5em]((suite))
 
  - Du *bytecode* stocké dans la blockchain
  - Rédigé dans un langage de haut niveau : *Solidity*
@@ -115,7 +117,8 @@ Note:
 
 ---
 
-### EVM <br> Ethereum Virtual Machine
+### EVM
+####Ethereum Virtual Machine
 
  - Émule une machine 256 bits avec des pseudo-registres
  - Les registres sont émulés par une *stack* virtuel
@@ -153,11 +156,20 @@ Pour remplir le réservoir il faut :
 ---
 
  - Fixer un *GAS limit* évite de dépenser une fortune en cas de problème dans un Smart Contract (ex: boucle infinie).
- - Fixer un *GAS limit* trop petit a peu d'intérêt. La quantité de GAS requis est défini par la quantité d'instructions exécuté sur la blockchain.
+ - La quantité de GAS requis est défini par la quantité d'instructions exécuté sur la blockchain.
+ - Fixer un *GAS limit* trop petit a peu d'intérêt.
 
 Note: 
  - https://kb.myetherwallet.com/gas/what-is-gas-ethereum.html   
 
+---
+
+### Coûts des instructions
+
+ - Transaction simple : 21000 GWei
+ 
+
+ - Nombre maximum de GAS qui peut être mis dans un bloc : 8 000 000 GAS
 
 ---
 
