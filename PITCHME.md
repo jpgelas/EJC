@@ -52,7 +52,7 @@ On ne parlera pas de ...
  - Blockchain : Structure de données simple 
  - La technologie Blockchain : « Base de données » sécurisées et décentralisées. 
  - Les mineurs :  
-   - génèrent de nouveaux coins (par rétribution), 
+   - génèrent de nouveaux *coins* (par rétribution), 
    - vérifient l’intégrité de la blockchain,
    - ajoutent de nouvelles liste de transaction (des blocs) à la chaine.
 
@@ -65,14 +65,10 @@ Note:
 
 @snap[west ethermap]
 ![USA](images/eth1.jpg)
-<br>
-USA
 @snapend
 
 @snap[east ethermap]
 ![Europe](images/eth2.jpg)
-<br>
-Europe
 @snapend
 
 @snap[south-west span-100]
@@ -93,7 +89,7 @@ Note:
  
 ---
 
-### Smart Contract @size[0.5em]((suite))
+### Smart Contract @size[0.3em](_suite_)
 
  - Du *bytecode* stocké dans la blockchain
  - Rédigé dans un langage de haut niveau : *Solidity*
