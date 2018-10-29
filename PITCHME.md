@@ -25,7 +25,7 @@ Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 }
 ```
 
-@snap[north-west ethermap]
+@snap[north-east]
 ![Avatar](images/avatar-jpgelas.png)
 @snapend
 
@@ -202,7 +202,7 @@ Maximiser les calculs offchain
 Cette présentation est disponible sur https://gitpitch.com/jpgelas/EJC
 
 @snap[south-east]
-@size[0.3em](:wq!)
+@size[0.5em](:wq!)
 @snapend
 
 
@@ -211,11 +211,7 @@ Cette présentation est disponible sur https://gitpitch.com/jpgelas/EJC
 ### Liens utiles
 
  - https://hackernoon.com/ether-purchase-power-df40a38c5a2f
-
  - OPCODE list + GAS : https://docs.google.com/spreadsheets/d/1m89CVujrQe5LAFJ8-YAUCcNK950dUzMQPMJBxRtGCqs/edit#gid=0
-
-# (work ?) - Evolution du Block.GasLimit : https://ethstats.net/
-
  - Ethernodes (28/10/2018 -> 13320 nodes) : https://www.ethernodes.org/network/1
  - https://www.etherchain.org/charts/averageBlockUtilization
 
