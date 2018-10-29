@@ -8,8 +8,10 @@ Université Lyon 1/LIRIS/INRIA/ENS Lyon
 Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 
 ---
-
+@snap[north-west]
 ### $ who am i
+@snapend
+
 <br><br>
 ```JSON
 {
@@ -25,7 +27,7 @@ Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 }
 ```
 
-@snap[north-east]
+@snap[north-east ethermap]
 ![Avatar](images/avatar-jpgelas.png)
 @snapend
 
