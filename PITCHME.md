@@ -4,6 +4,7 @@ Jean-Patrick Gelas, Hayri Acar, Hind Benfenatki
 <br>
 Université Lyon 1/LIRIS/INRIA/ENS Lyon
 <br>
+<br>
 Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 
 ---
@@ -19,9 +20,15 @@ Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 			"Avalon/INRIA/ENS Lyon" ],
 	"github" : "https://github.com/jpgelas",
 	"url" : "https://perso.univ-lyon1.fr/jean-patrick.gelas",
-	"email" : "jean-patrick.gelas@univ-lyon1.fr"
+	"email" : "jean-patrick.gelas@univ-lyon1.fr",
+	"hobbies" : [ "skydive", "wingsuit" ]
 }
 ```
+
+@snap[north-west ethermap]
+![Avatar](images/avatar-jpgelas.png)
+@snapend
+
 
 ---
 
@@ -64,11 +71,11 @@ Note:
 25000 nœuds contre 7000 pour Bitcoin (31/5/2017)
 
 @snap[west ethermap]
-![USA](images/eth1.jpg)
+![USA](images/eth1.png)
 @snapend
 
 @snap[east ethermap]
-![Europe](images/eth2.jpg)
+![Europe](images/eth2.png)
 @snapend
 
 @snap[south-west span-100]
@@ -114,7 +121,8 @@ Note:
 ---
 
 ### EVM
-####Ethereum Virtual Machine
+
+_Ethereum Virtual Machine_
 
  - Émule une machine 256 bits avec des pseudo-registres
  - Les registres sont émulés par une *stack* virtuel
@@ -162,10 +170,30 @@ Note:
 
 ### Coûts des instructions
 
+ - Gas is an abstract number that represents the relative complexity of operations.
+ - ADD = 3 gas ; MUL = 5 gas
  - Transaction simple : 21000 GWei
- 
-
  - Nombre maximum de GAS qui peut être mis dans un bloc : 8 000 000 GAS
+
+Note: 
+ - Lu ailleur : 4700000 gas/block (28/juin/2017)
+
+---
+
+ - the total fee that they pay is equal to gas_price * gas_used.
+ - Miners are paid out this fee and so they prioritize transactions with a higher gas price. 
+ - The higher gas price you are willing to pay, the faster your transaction will be processed.
+ 
+---?image=images/ethgasstation-10.2018.png&size=contain
+
+---
+
+### Conclusion
+
+With the increased cost and inefficiencies of the blockchain, we gain guarantees of open, censorship resistant code execution and publicly available, immutable data.
+
+Maximiser les calculs offchain
+
 
 ---
 
@@ -173,9 +201,22 @@ Note:
 
 Cette présentation est disponible sur https://gitpitch.com/jpgelas/EJC
 
+@snap[south-east]
+@size[0.3em](:wq!)
+@snapend
 
 
+---
 
+### Liens utiles
 
+ - https://hackernoon.com/ether-purchase-power-df40a38c5a2f
+
+ - OPCODE list + GAS : https://docs.google.com/spreadsheets/d/1m89CVujrQe5LAFJ8-YAUCcNK950dUzMQPMJBxRtGCqs/edit#gid=0
+
+# (work ?) - Evolution du Block.GasLimit : https://ethstats.net/
+
+ - Ethernodes (28/10/2018 -> 13320 nodes) : https://www.ethernodes.org/network/1
+ - https://www.etherchain.org/charts/averageBlockUtilization
 
 
