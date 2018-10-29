@@ -9,7 +9,7 @@ Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 
 ---
 @snap[north-west]
-### $ who am i
+@size[2em]($ who am i)
 @snapend
 
 <br><br>
