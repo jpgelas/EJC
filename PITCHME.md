@@ -69,8 +69,9 @@ Note:
  - Mining ether = Securing the network = Verifying computation
 
 ---
-### L’infrastructure Ethereum
-25000 nœuds contre 7000 pour Bitcoin (31/5/2017)
+@snap[north]
+@size[2em](L’infrastructure Ethereum)
+@snapend
 
 @snap[west ethermap]
 ![USA](images/eth1.png)
@@ -83,6 +84,10 @@ Note:
 @snap[south-west span-100]
 @size[0.3em](Source: https://twitter.com/peter_szilagyi/status/887272506914213888 - 18/07/2017)
 @snapend
+
+Note:
+  - 25000 nœuds contre 7000 pour Bitcoin (31/5/2017)
+
 
 --- 
 
