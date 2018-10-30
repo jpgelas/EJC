@@ -70,7 +70,7 @@ Note:
 
 ---
 @snap[north]
-@size[2em](L’infrastructure Ethereum)
+@size[1em](L’infrastructure Ethereum)
 @snapend
 
 @snap[west ethermap]
