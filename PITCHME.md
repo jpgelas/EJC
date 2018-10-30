@@ -69,8 +69,8 @@ Note:
  - Mining ether = Securing the network = Verifying computation
 
 ---
-@snap[north]
-@size[1em](L’infrastructure Ethereum)
+@snap[north span-100]
+@size[1.5em](L’infrastructure Ethereum)
 @snapend
 
 @snap[west ethermap]
