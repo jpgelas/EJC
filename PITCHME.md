@@ -9,9 +9,12 @@ Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 
 ---
 @snap[north-west]
-@size[2em]($ who am i)
+@size[2em](jp@ejc2018:~$ whoami)
 @snapend
 
+@snap[north-east ethermap]
+![Avatar](images/avatar-jpgelas.png)
+@snapend
 <br><br>
 ```JSON
 {
@@ -20,18 +23,12 @@ Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 	"job" : "Assistant Professor",
 	"locations" : [ "Université Claude Bernard - Lyon 1",
 			"Avalon/INRIA/ENS Lyon" ],
-	"github" : "https://github.com/jpgelas",
 	"url" : "https://perso.univ-lyon1.fr/jean-patrick.gelas",
 	"email" : "jean-patrick.gelas@univ-lyon1.fr",
+	"github" : "https://github.com/jpgelas",
 	"hobbies" : [ "skydive", "wingsuit" ]
 }
 ```
-
-@snap[north-east ethermap]
-![Avatar](images/avatar-jpgelas.png)
-@snapend
-
-
 ---
 
 ### Agenda
@@ -39,9 +36,10 @@ Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 On ne parlera pas de ...
 
 @ul
- - Algorithmes de consensus (PoW, PoS, ...)
- - Minage	
- - Merkle trees
+ - Algorithmes de consensus (PoW, PoS, DPoS,...)
+ - Cryptographie, Hash, Merkle tree,...
+ - Plateformes d'échange
+ - Comment miner de la crypto monnaie	
  - Comment devenir un crypto millionaire ! :-)
 @ulend
  
@@ -49,26 +47,47 @@ On ne parlera pas de ...
 
 ### Objectifs
  
- - Bref rappels (Blochain, Mineurs, ...)
- - Introduction aux Smart Contracts de la blockchain Ethereum : 
-   - Création, déploiement, usage, fonctionnement.
- 
+ - Rappels (Blockchain, Mineurs, ...)
+ - Introduction à la blockchain Ethereum
+ - Les Smart Contracts 
+   - Création, déploiement, fonctionnement.
+ - Modélisation et maitrise de leur consommation
 
 ---
 
-### Rappels
+### Rappels : Blockchain
 
+![blockchain](images/blockchain.png)
  - Blockchain : Structure de données simple 
  - La technologie Blockchain : « Base de données » sécurisées et décentralisées. 
- - Les mineurs :  
-   - génèrent de nouveaux *coins* (par rétribution), 
-   - vérifient l’intégrité de la blockchain,
-   - ajoutent de nouvelles liste de transaction (des blocs) à la chaine.
 
-Note:
- - Mining ether = Securing the network = Verifying computation
+Démo : https://anders.com/blockchain/
 
 ---
+
+### Rappels : Les mineurs
+
+  - Ajoutent de nouvelles liste de transactions (*i.e.* des blocs) à la chaine.
+  - Vérifient l’intégrité de la blockchain
+  - Génèrent de nouveaux *coins* (par rétribution) 
+
+---
+
+### Ethereum
+@snap[north-east ethermap]
+![LogoEthereum](images/logo-ethereum.png)
+@snapend
+
+@quote[Protocole d'échanges décentralisés permettant la création par les utilisateurs de contrats intelligents grâce à un langage Turing-complet.](Wikipedia)
+
+  - Développée par Vitalik Buterin, lancée en juillet 2015.
+  - Fréquence moyenne des blocs : 14-15 secondes
+  - Symbole boursier : *ETH*
+  - Quantité maximale : non limitée
+  - Taille des blocs dynamique
+
+---
+
 @snap[north span-100]
 @size[1.2em](L’infrastructure Ethereum)
 @snapend
@@ -87,20 +106,28 @@ Note:
 
 Note:
   - 25000 nœuds contre 7000 pour Bitcoin (31/5/2017)
+  - green = @golang geth, 
+  - orange = @rustlang parity, 
+  - white = everything else.
+
 
 ---?image=images/Ethernodes.org.2018-10-28.png&size=contain
 @title[Ethernodes (web)]
 
 --- 
+
 ### Smart Contract
 
- - Un bout de code
- - Déployé/répliqué/distribué 
+ - Programme autonome
+ - Déployé et répliqué 
  - Non modifiable
- - Bien adapté pour gérer des transactions
+ - Adapté pour gérer des transactions
 
 Note: 
-  - Déployé et répliqué sur la même infrastructure de calcul qui héberge et mine la blockchain Ethereum.
+  - Programme autinime qui exécute automatiquement des conditions définies au
+    préalable et inscrites dans la blockchain.
+  - Déployé et répliqué sur la même infrastructure de calcul qui héberge et
+    mine la blockchain Ethereum.
  
 ---
 
@@ -111,6 +138,8 @@ Note:
  - Compilé avec *solc*
  - Accessible via une adresse codé sur *160 bits*
  - Exécuté dans l'*Ethereum Virtual Machine* (EVM)
+<br/>
+0x9522618F9664b8d20324a892Cd4d1dBaC0A95fc5
 
 Note:
  - ou rédigé en Serpent, Viper, LLL,...)
@@ -122,33 +151,77 @@ Note:
 "608060405234801561001057600080fd5b5060405160
 208061048783398101604090815290516000805460016
 0a060020a0319163317808255600160a060020a031681
-52600160208190529290209190915560ff81166100606...
+52600160208190529290209190915560ff81166100606..."
 	"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE
 CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0
 DUP1 REVERT JUMPDEST POP PUSH1 0x40 MLOAD PUSH1 
 0x20 DUP1 PUSH2 0x487 DUP4 CODECOPY DUP2 ADD 
-PUSH1 0x40 SWAP1 DUP2 MSTORE SWAP1 MLOAD PUSH1... 
+PUSH1 0x40 SWAP1 DUP2 MSTORE SWAP1 MLOAD PUSH1..." 
 ```
 ---
 
 ### Le langage Solidity en bref
 
  - Langage de haut niveau
- - influencé par C++, Python et Javascript
- - Typé statiquement
- - Supporte l'héritage
- - L'appel a des bibliothèques
- - La définition de type complexe par les utilisateurs
+ - influencé par C++, Python et Javascript.
+ - Typé statiquement.
+ - Supporte l'héritage,
+ - l'appel à des bibliothèques,
+ - la définition de type complexe par les utilisateurs.
 
 ---
+
+```
+contract ZRXToken is UnlimitedAllowanceToken {
+
+    uint8 constant public decimals = 18;
+    uint public totalSupply = 10**27; // 1 billion tokens, 18 decimal places
+    string constant public name = "0x Protocol Token";
+    string constant public symbol = "ZRX";
+
+    function ZRXToken() {
+        balances[msg.sender] = totalSupply;
+    }
+}
+```
+
+---
+ 
+```
+contract Nexium { 
+	...
+	function Nexium() {
+		initialSupply = 100000000000;
+		balanceOf[msg.sender] = initialSupply;             // Give the creator all initial tokens                    
+		name = 'Nexium';                                 // Set the name for display purposes     
+		symbol = 'NxC';                               	 // Set the symbol for display purposes    
+		decimals = 3;                          		 // Amount of decimals for display purposes
+		burnAddress = 0x1b32000000000000000000000000000000000000;
+	}
+	function totalSupply() returns(uint){
+		return initialSupply - balanceOf[burnAddress];
+	}
+	function transfer(address _to, uint256 _value) ...
+	function transferFrom(address _from, ...
+```
+B2expand
 
 ### EVM
 
 _Ethereum Virtual Machine_
 
+ - (quasi-) Turing complete machine
+ - Environnement d'exécution des Smart Contracts
  - Émule une machine 256 bits avec des pseudo-registres
- - Les registres sont émulés par une *stack* virtuel
+ - Registres émulés par une *stack* virtuel
 
+![EVM](images/compressed_evm.png)
+
+Note:
+  - In computing, a machine is said to be Turing complete if it can solve any
+    problem that a Turing machine can, given an appropriate algorithm, the necessary time and memory.
+  - Pour l'EVM le paramètre limitant est le GAS.
+  - https://www.mayowatudonu.com/blockchain/deep-dive-into-evm-intro
 ---
 
 ### Ethereum et unités de mesure
@@ -189,15 +262,16 @@ Note:
  - https://kb.myetherwallet.com/gas/what-is-gas-ethereum.html   
 
 ---
-### Coûts des instructions
+### Coûts des instructions : Exemples
 
- - Gas is an abstract number that represents the relative complexity of operations.
- - ADD = 3 gas ; MUL = 5 gas
- - Transaction simple : 21000 GWei
- - Nombre maximum de GAS qui peut être mis dans un bloc : 8 000 000 GAS
+ - ADD = 3 GAS ; MUL = 5 GAS
+ - MLOAD / MSTORE : 
+ - SLOAD / SSTORE : 
+ - Transaction simple : 21000 GAS
+ - Limit de GAS par bloc : 8 000 000 GAS
 
 Note: 
- - Lu ailleur : 4700000 gas/block (28/juin/2017)
+ - Lu ailleur : 4 700 000 gas/block (28/juin/2017)
 
 ---
 
@@ -210,11 +284,16 @@ Note:
 
 ---
 
+
+---
+
 ### Conclusion
 
-With the increased cost and inefficiencies of the blockchain, we gain guarantees of open, censorship resistant code execution and publicly available, immutable data.
+ - Mining ether = Securing the network = Verifying computation
 
-Maximiser les calculs offchain
+ - With the increased cost and inefficiencies of the blockchain, we gain guarantees of open, censorship resistant code execution and publicly available, immutable data.
+
+ - Maximiser les calculs offchain
 
 
 ---
@@ -236,5 +315,5 @@ Cette présentation est disponible sur https://gitpitch.com/jpgelas/EJC
  - OPCODE list + GAS : https://docs.google.com/spreadsheets/d/1m89CVujrQe5LAFJ8-YAUCcNK950dUzMQPMJBxRtGCqs/edit#gid=0
  - Ethernodes (28/10/2018 -> 13320 nodes) : https://www.ethernodes.org/network/1
  - https://www.etherchain.org/charts/averageBlockUtilization
-
+ - https://etherscan.io/
 
