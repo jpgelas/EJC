@@ -67,9 +67,11 @@ Démo : https://anders.com/blockchain/
 
 ### Rappels : Les mineurs
 
+  - Héberge une copie de la blockchain
   - Ajoutent de nouvelles liste de transactions (*i.e.* des blocs) à la chaine.
   - Vérifient l’intégrité de la blockchain
-  - Génèrent de nouveaux *coins* (par rétribution) 
+  - Génèrent de nouveaux *coins* (par rétribution)
+  - (Exécutent les Smart Contracts) 
 
 ---
 
@@ -80,11 +82,15 @@ Démo : https://anders.com/blockchain/
 
 @quote[Protocole d'échanges décentralisés permettant la création par les utilisateurs de contrats intelligents grâce à un langage Turing-complet.](Wikipedia)
 
+  - Blockchain de *seconde génération*
   - Développée par Vitalik Buterin, lancée en juillet 2015.
   - Fréquence moyenne des blocs : 14-15 secondes
   - Symbole boursier : *ETH*
   - Quantité maximale : non limitée
   - Taille des blocs dynamique
+
+Note:
+  - Vitalin et aussi Gavin Wood, Joseph Lubin
 
 ---
 
@@ -105,7 +111,7 @@ Démo : https://anders.com/blockchain/
 @snapend
 
 Note:
-  - 25000 nœuds contre 7000 pour Bitcoin (31/5/2017)
+  - 27500 nœuds contre 7000 pour Bitcoin (31/5/2017)
   - green = @golang geth, 
   - orange = @rustlang parity, 
   - white = everything else.
@@ -124,7 +130,7 @@ Note:
  - Adapté pour gérer des transactions
 
 Note: 
-  - Programme autinime qui exécute automatiquement des conditions définies au
+  - Programme autonome qui exécute automatiquement des conditions définies au
     préalable et inscrites dans la blockchain.
   - Déployé et répliqué sur la même infrastructure de calcul qui héberge et
     mine la blockchain Ethereum.
@@ -265,35 +271,72 @@ Note:
 ### Coûts des instructions : Exemples
 
  - ADD = 3 GAS ; MUL = 5 GAS
- - MLOAD / MSTORE : 
- - SLOAD / SSTORE : 
+ - MLOAD / MSTORE : TODO
+ - SLOAD / SSTORE : TODO
+
  - Transaction simple : 21000 GAS
- - Limit de GAS par bloc : 8 000 000 GAS
+ - Limite de GAS par bloc : 8 000 000 GAS
 
 Note: 
  - Lu ailleur : 4 700 000 gas/block (28/juin/2017)
 
 ---
 
- - the total fee that they pay is equal to gas_price * gas_used.
- - Miners are paid out this fee and so they prioritize transactions with a higher gas price. 
- - The higher gas price you are willing to pay, the faster your transaction will be processed.
+ - Le coût total d'une transaction = *GAS_price x GAS_used* 
+ - Les mineurs donne priorité aux transactions avec un *GAS_price* élevé.
+ - Plus l'utilisateur est prêt à payer, plus vite la transaction sera traitée.
  
 ---?image=images/ethgasstation-10.2018.png&size=contain
 @title[EthGasStation (web)]
 
 ---
 
+### Performances actuel
+
+ - block (slot) time  15 sec, blocks/min 4
+ - block/day 5959, block/year 2 174 897
+ - Block Gas limit 8 000 000
+ - Daily Gas cap 47 668 965 517
+ - avg gas/tx 76 364
+ - tx/day cap 624 236
+ - tx/min 433
+ - tx/sec 7
+
+Note:
+  - VISA annonce 24000 tx/sec -> 1700 en réalité
+  - Shasper annonce 13410 tx/sec !!! (Casper + Sharding)
+
+---
+
+### En résumé pour le calcul...
+
+  - L'infrastructure Ethereum est un énorme ordinateur Turing complet distribué
+  - Ultra tolérant aux pannes
+  - Trés mal exploité car tous les noeuds exécutent les mêmes instructions avec les même données.
+
+---
+
+### En résumé pour le stockage...
+
+  Par conception on est limité par 
+  - la capacité de stockage des noeuds
+  - le débit limité (90 kB / 15 sec.)
+  - le prix du GAS qui fluctue en fonction de l'Ether
+  - ~200.000 EUR / GBytes
+
+Note:
+ - On y stock le hash du fichier seulement (Proof-of-existence)
+ 
 
 ---
 
 ### Conclusion
 
- - Mining ether = Securing the network = Verifying computation
+ - Miner de l'ether = Sécuriser le réseau = Vérifier les traitements
+ - Par conception la blockchain Ethereum garantie l'immutabilité des données,
+   l'exécution et l'accès sans censure possible. 
 
- - With the increased cost and inefficiencies of the blockchain, we gain guarantees of open, censorship resistant code execution and publicly available, immutable data.
-
- - Maximiser les calculs offchain
+ - Maximiser les calculs *offchain*.
 
 
 ---
