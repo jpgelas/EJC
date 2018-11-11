@@ -168,12 +168,33 @@ PUSH1 0x40 SWAP1 DUP2 MSTORE SWAP1 MLOAD PUSH1..."
 
 ### Le langage Solidity en bref
 
+@snap[north-east ethermap]
+![LogoSolidity](images/logo-solidity.png)
+@snapend
+
  - Langage de haut niveau
  - influencé par C++, Python et Javascript.
  - Typé statiquement.
  - Supporte l'héritage,
  - l'appel à des bibliothèques,
  - la définition de type complexe par les utilisateurs.
+
+---
+### Hello world
+
+```
+pragma solidity ^0.4.18;
+contract Hello {
+    string message = "Default message";
+    function setMessage (string _message) public payable {
+        message = _message;
+    }
+    function getMessage () public view returns (string) {
+        return message;
+    }
+}
+```
+
 
 ---
 
@@ -210,7 +231,7 @@ contract Nexium {
 	function transfer(address _to, uint256 _value) ...
 	function transferFrom(address _from, ...
 ```
-B2expand
+http://b2expand.com/nexium-token
 
 ### EVM
 
@@ -260,6 +281,8 @@ Pour remplir le réservoir il faut :
 
 ---
 
+### En résumé...
+
  - Fixer un *GAS limit* évite de dépenser une fortune en cas de problème dans un Smart Contract (ex: boucle infinie).
  - La quantité de GAS requis est défini par la quantité d'instructions exécuté sur la blockchain.
  - Fixer un *GAS limit* trop petit a peu d'intérêt.
@@ -268,17 +291,20 @@ Note:
  - https://kb.myetherwallet.com/gas/what-is-gas-ethereum.html   
 
 ---
+
 ### Coûts des instructions : Exemples
 
- - ADD = 3 GAS ; MUL = 5 GAS
- - MLOAD / MSTORE : TODO
- - SLOAD / SSTORE : TODO
-
- - Transaction simple : 21000 GAS
- - Limite de GAS par bloc : 8 000 000 GAS
+![GasCost1](images/evm-opcode-gas-1.png)
+![GasCost2](images/evm-opcode-gas-2.png)
 
 Note: 
  - Lu ailleur : 4 700 000 gas/block (28/juin/2017)
+ - ADD = 3 GAS ; MUL = 5 GAS
+ - MLOAD / MSTORE : TODO
+ - SLOAD / SSTORE : TODO
+ - Transaction simple : 21000 GAS
+ - Limite de GAS par bloc : 8 000 000 GAS
+
 
 ---
 
@@ -286,12 +312,17 @@ Note:
  - Les mineurs donne priorité aux transactions avec un *GAS_price* élevé.
  - Plus l'utilisateur est prêt à payer, plus vite la transaction sera traitée.
  
+---?image=images/tx_pool_infographic.png&size=contain
+@title[MyEtherWallet]
+
 ---?image=images/ethgasstation-10.2018.png&size=contain
 @title[EthGasStation (web)]
 
+---?image=images/chart.png&size=contain
+@title[Ethereum blocks usage]
 ---
 
-### Performances actuel
+### Performances actuelles
 
  - block (slot) time  15 sec, blocks/min 4
  - block/day 5959, block/year 2 174 897
@@ -320,13 +351,42 @@ Note:
 
   Par conception on est limité par 
   - la capacité de stockage des noeuds
-  - le débit limité (90 kB / 15 sec.)
+  - le débit limité (90 kB / 15 sec => 50 kbits/s)
   - le prix du GAS qui fluctue en fonction de l'Ether
   - ~200.000 EUR / GBytes
 
 Note:
  - On y stock le hash du fichier seulement (Proof-of-existence)
  
+
+---?image=images/clark-howard-253013121&size=contain
+@title[90's phones]
+
+
+### Ganache
+
+![GanacheUI](images/ganache-snapshot.png)
+
+---
+### Metamask
+
+![Metamask](images/metamask-snapshot.png)
+![Metamask-Tx](images/metamask-transaction-snapshot.png)
+
+---
+### Transaction
+
+![GanacheTX](images/ganache-transaction.png)
+
+---
+
+### Transaction (détail)
+![GanacheTX-detail](images/ganache-transaction-detail.png)
+
+---?image=images/remix-snapshot.png&size=contain
+@title[Remix snapshot]
+
+
 
 ---
 
@@ -335,8 +395,9 @@ Note:
  - Miner de l'ether = Sécuriser le réseau = Vérifier les traitements
  - Par conception la blockchain Ethereum garantie l'immutabilité des données,
    l'exécution et l'accès sans censure possible. 
+ - Important d'analyser un Smart Contract en terme de consommation de GAS pour maitriser le coût operationnel.
 
- - Maximiser les calculs *offchain*.
+ - Maximiser les calculs et le sockage *offchain*.
 
 
 ---
