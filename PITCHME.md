@@ -5,14 +5,14 @@ Jean-Patrick Gelas, Hayri Acar, Hind Benfenatki
 Université Lyon 1/LIRIS/INRIA/ENS Lyon
 <br>
 <br>
-Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
+@size[1em](Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon)
 
 ---
-@snap[north-west]
-@size[2em](jp@ejc2018:~$ whoami)
+@snap[north-west span-50]
+jp@ejc2018:~$ @color[red](whoami)
 @snapend
 
-@snap[north-east ethermap]
+@snap[north-east logo]
 ![Avatar](images/avatar-jpgelas.png)
 @snapend
 <br><br>
@@ -36,11 +36,11 @@ Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon
 On ne parlera pas de ...
 
 @ul
- - Algorithmes de consensus (PoW, PoS, DPoS,...)
  - Cryptographie, Hash, Merkle tree,...
- - Plateformes d'échange
+ - Algorithmes de consensus (PoW, PoS, DPoS,...)
+ - Plateformes d'échanges
  - Comment miner de la crypto monnaie	
- - Comment devenir un crypto millionaire ! :-)
+ - Comment devenir @color[#e49436](crypto millionaire) ! @fa[smile-o fa-1x]
 @ulend
  
 ---
@@ -48,10 +48,10 @@ On ne parlera pas de ...
 ### Objectifs
  
  - Rappels (Blockchain, Mineurs, ...)
- - Introduction à la blockchain Ethereum
- - Les Smart Contracts 
-   - Création, déploiement, fonctionnement.
- - Modélisation et maitrise de leur consommation
+ - Introduction à la blockchain *Ethereum*
+ - Les Smart Contracts : Création, déploiement, fonctionnement.
+ - Modélisation et maitrise de leur consommation.
+ 
 
 ---
 
@@ -61,11 +61,19 @@ On ne parlera pas de ...
  - Blockchain : Structure de données simple 
  - La technologie Blockchain : « Base de données » sécurisées et décentralisées. 
 
-Démo : https://anders.com/blockchain/
+@snap[south-west]
+@size[0.5em](Démo : https://anders.com/blockchain/)
+@snapend
+
+
 
 ---
 
 ### Rappels : Les mineurs
+
+@snap[north-east ethermap]
+![8xrig](images/8xgpu-mining-rig-open-air-frame.png)
+@snapend
 
   - Héberge une copie de la blockchain
   - Ajoutent de nouvelles liste de transactions (*i.e.* des blocs) à la chaine.
@@ -76,25 +84,25 @@ Démo : https://anders.com/blockchain/
 ---
 
 ### Ethereum
-@snap[north-east ethermap]
+@snap[north-east logo]
 ![LogoEthereum](images/logo-ethereum.png)
 @snapend
 
 @quote[Protocole d'échanges décentralisés permettant la création par les utilisateurs de contrats intelligents grâce à un langage Turing-complet.](Wikipedia)
 
+@size[0.5em](
   - Blockchain de *seconde génération*
-  - Développée par Vitalik Buterin, lancée en juillet 2015.
+  - Développée par *Vitalik Buterin*, lancée en juillet 2015.
   - Fréquence moyenne des blocs : 14-15 secondes
   - Symbole boursier : *ETH*
   - Quantité maximale : non limitée
-  - Taille des blocs dynamique
-
+  - Taille des blocs : dynamique
+)
 Note:
   - Vitalin et aussi Gavin Wood, Joseph Lubin
 
 ---
-
-@snap[north span-100]
+@snap[west span-100]
 @size[1.2em](L’infrastructure Ethereum)
 @snapend
 
@@ -120,9 +128,18 @@ Note:
 ---?image=images/Ethernodes.org.2018-10-28.png&size=contain
 @title[Ethernodes (web)]
 
+@snap[south-east span-40]
+@size[0.3em](https://www.ethernodes.org)
+@snapend
+
 --- 
 
 ### Smart Contract
+
+@snap[north-east logo]
+![LogoSmartContract](images/smartcontract.png)
+@snapend
+
 
  - Programme autonome
  - Déployé et répliqué 
@@ -141,35 +158,37 @@ Note:
 
  - Du *bytecode* stocké dans la blockchain
  - Rédigé dans un langage de haut niveau : *Solidity*
- - Compilé avec *solc*
+ - Compilé (*solc*)
  - Accessible via une adresse codé sur *160 bits*
  - Exécuté dans l'*Ethereum Virtual Machine* (EVM)
 <br/>
-0x9522618F9664b8d20324a892Cd4d1dBaC0A95fc5
+<br/>
+0x71c7656ec7ab88b098defb751b7401b5f6d8976f
 
 Note:
  - ou rédigé en Serpent, Viper, LLL,...)
 
 ---
+### Code Machine 
 
 ```
-	"object":
-"608060405234801561001057600080fd5b5060405160
-208061048783398101604090815290516000805460016
-0a060020a0319163317808255600160a060020a031681
-52600160208190529290209190915560ff81166100606..."
-	"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE
+"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE
 CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0
 DUP1 REVERT JUMPDEST POP PUSH1 0x40 MLOAD PUSH1 
 0x20 DUP1 PUSH2 0x487 DUP4 CODECOPY DUP2 ADD 
 PUSH1 0x40 SWAP1 DUP2 MSTORE SWAP1 MLOAD PUSH1..." 
+"object":
+"608060405234801561001057600080fd5b5060405160
+208061048783398101604090815290516000805460016
+0a060020a0319163317808255600160a060020a031681
+52600160208190529290209190915560ff81166100606..."
 ```
 ---
 
 ### Le langage Solidity en bref
 
-@snap[north-east ethermap]
-![LogoSolidity](images/logo-solidity.png)
+@snap[north-east logo]
+![LogoSolidity](images/logo-solidity.jpg)
 @snapend
 
  - Langage de haut niveau
@@ -186,18 +205,19 @@ PUSH1 0x40 SWAP1 DUP2 MSTORE SWAP1 MLOAD PUSH1..."
 pragma solidity ^0.4.18;
 contract Hello {
     string message = "Default message";
-    function setMessage (string _message) public payable {
-        message = _message;
-    }
+
     function getMessage () public view returns (string) {
         return message;
+    }
+    function setMessage (string _message) public payable {
+        message = _message;
     }
 }
 ```
 
 
 ---
-
+### 0x (ZRX) token (ERC-20)
 ```
 contract ZRXToken is UnlimitedAllowanceToken {
 
@@ -213,16 +233,16 @@ contract ZRXToken is UnlimitedAllowanceToken {
 ```
 
 ---
- 
+### Nexium (NXC) token (ERC-20)
 ```
 contract Nexium { 
 	...
 	function Nexium() {
 		initialSupply = 100000000000;
-		balanceOf[msg.sender] = initialSupply;             // Give the creator all initial tokens                    
-		name = 'Nexium';                                 // Set the name for display purposes     
-		symbol = 'NxC';                               	 // Set the symbol for display purposes    
-		decimals = 3;                          		 // Amount of decimals for display purposes
+		balanceOf[msg.sender] = initialSupply;
+		name = 'Nexium';
+		symbol = 'NxC';
+		decimals = 3;
 		burnAddress = 0x1b32000000000000000000000000000000000000;
 	}
 	function totalSupply() returns(uint){
@@ -231,11 +251,17 @@ contract Nexium {
 	function transfer(address _to, uint256 _value) ...
 	function transferFrom(address _from, ...
 ```
-http://b2expand.com/nexium-token
+@snap[south-east span-40]
+@size[0.3em](http://b2expand.com/nexium-token)
+@snapend
+
+---
 
 ### EVM
 
 _Ethereum Virtual Machine_
+
+![EVM](images/compressed_evm.png)
 
  - (quasi-) Turing complete machine
  - Environnement d'exécution des Smart Contracts
@@ -249,35 +275,29 @@ Note:
     problem that a Turing machine can, given an appropriate algorithm, the necessary time and memory.
   - Pour l'EVM le paramètre limitant est le GAS.
   - https://www.mayowatudonu.com/blockchain/deep-dive-into-evm-intro
+
 ---
 
 ### Ethereum et unités de mesure
 
- - Ether (ETH) : le nom de la crypto monnaie
- - Wei : une fraction d'Ether (1 ETH = 10^18 Wei)
+ - **Ether** (ETH) : le nom de la crypto monnaie
+ - **Wei** : une fraction d'Ether (1 ETH = 10^18 Wei)
+ - **GAS** : unité de mesure en terme de quantité de calcul 
+ - **GAS price** : défini le prix (en Wei) que vous êtes prêt a payer au mineur.
+ - **GAS limit** : Quantité maximum de gas que vous êtes prêt à payer pour une transaction.
  
- - GAS : unité de mesure en terme de quantité de calcul 
- - *GAS price* : défini le prix (en Wei) que vous êtes prêt a payer au mineur.
- - *GAS limit* : Quantité maximum de gas que vous êtes prêt à payer pour une transaction.
- 
-Note:
- - ex: quantité de calcul pour émettre une transaction, 
- - exécuter un smart contract.
- - gas price : prix que vous êtes prêt à payer en tant qu’initiateur d’une transaction.
-
 ---
 
 ### Analogie
 
- *GAS limit* est la capacité du réservoir d'une voiture en litre. *GAS price* le prix du litre de carburant.
+  - *GAS limit* : capacité du réservoir d'une voiture en litre. 
+  - *GAS price* le prix du litre de carburant.
+    - Voiture : 1,50 EUR (prix) par litre (unité)
+    - Ethereum : 20 GWei (prix) par GAS (unité)
 
- - Voiture : 1,50 EUR (prix) par litre (unité)
- - Ethereum : 20 GWei (prix) par GAS (unité)
-
-Pour remplir le réservoir il faut :
-
- - 50 litres à 1,50 EUR = 75 EUR
- - 21000 unité de GAS à 20 GWei = 0.00042 ETH 
+  - Pour remplir le réservoir il faut :
+    - 50 litres à 1,50 EUR = 75 EUR
+    - 21000 unités de GAS à 20 GWei = 0.00042 ETH 
 
 ---
 
@@ -294,8 +314,8 @@ Note:
 
 ### Coûts des instructions : Exemples
 
-![GasCost1](images/evm-opcode-gas-1.png)
-![GasCost2](images/evm-opcode-gas-2.png)
+![GasCost1](images/evm-opcode-gas-cost-1.png)
+![GasCost2](images/evm-opcode-gas-cost-2.png)
 
 Note: 
  - Limite de GAS par bloc : 8 000 000 GAS
@@ -303,6 +323,8 @@ Note:
  - Transaction simple : 21000 GAS
 
 ---
+
+### Coûts d'une transaction
 
  - Le coût total d'une transaction = *GAS_price x GAS_used* 
  - Les mineurs donne priorité aux transactions avec un *GAS_price* élevé.
@@ -320,14 +342,14 @@ Note:
 
 ### Performances actuelles 
 
- - block (slot) time  15 sec, blocks/min 4
+ - **block time 15 sec**, blocks/min 4
  - block/day 5959, block/year 2 174 897
- - Block Gas limit 8 000 000
+ - **Block Gas limit 8 000 000**
  - Daily Gas cap 47 668 965 517
  - avg gas/tx 76 364
  - tx/day cap 624 236
  - tx/min 433
- - tx/sec 7
+ - **tx/sec 7**
 
 Note:
   - VISA annonce 24000 tx/sec -> 1700 en réalité
@@ -335,7 +357,7 @@ Note:
 
 ---
 
-### En résumé pour le calcul...
+### En résumé : Pour le calcul...
 
   - L'infrastructure Ethereum est un énorme ordinateur Turing complet distribué
   - Ultra tolérant aux pannes
@@ -343,23 +365,28 @@ Note:
 
 ---
 
-### En résumé pour le stockage...
+### En résumé : Pour le stockage...
 
   Par conception on est limité par :  
   - la capacité de stockage des noeuds
   - le débit (90 kB / 15 sec => 50 kbits/s)
   - le prix du GAS qui fluctue en fonction de l'Ether
-  
   - *SSTORE* : 20.000 GAS/Word -> 640.000 GAS/KB
-  - 3,5 GWei / GAS -> 0,00224 ETH/KB
-  - 200 $/ETH -> 0,448 $/KB, 448 $/MB, *448.000 $/GB*
+    - 3,5 GWei / GAS -> 0,00224 ETH/KB
+    - 200 $/ETH -> 0,448 $/KB
 
 Note:
  - On y stock le hash du fichier seulement (Proof-of-existence)
+---
+
+### 448.000 USD / GBytes
+
+(novembre 2018)
 
 ---?image=images/clark-howard-253013121&size=contain
 @title[90's phones]
 
+---
 
 ### Ganache
 
@@ -367,9 +394,13 @@ Note:
 
 ---
 ### Metamask
-
+@snap[west ethermap]
 ![Metamask](images/metamask-snapshot.png)
+@snapend
+
+@snap[east ethermap]
 ![Metamask-Tx](images/metamask-transaction-snapshot.png)
+@snapend
 
 ---
 ### Transaction
@@ -391,12 +422,12 @@ Note:
 ### Conclusion
 
  - Miner de l'ether = Sécuriser le réseau = Vérifier les traitements
- - Par conception la blockchain Ethereum garantie l'immutabilité des données,
-   l'exécution et l'accès sans censure possible. 
+ - Par conception la blockchain Ethereum garantie :
+   - l'immutabilité des données,
+   - l'exécution et l'accès sans censure possible. 
  - Important d'analyser un Smart Contract en terme de consommation de GAS pour maitriser le coût operationnel.
 
  - Maximiser les calculs et le sockage *offchain*.
-
 
 ---
 
