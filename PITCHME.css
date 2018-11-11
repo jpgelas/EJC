@@ -5,6 +5,7 @@
 }
 
 .logo img {
-  width: 30%;
+  width: 50%;
+  border: none !important;
 }
 

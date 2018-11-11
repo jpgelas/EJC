@@ -5,11 +5,11 @@ Jean-Patrick Gelas, Hayri Acar, Hind Benfenatki
 Université Lyon 1/LIRIS/INRIA/ENS Lyon
 <br>
 <br>
-@size[1em](Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon)
+@size[0.8em](Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon)
 
 ---
 @snap[north-west span-50]
-jp@ejc2018:~$ @color[red](whoami)
+@size[1.3em](jp@ejc2018:~$ @color[blue](whoami))
 @snapend
 
 @snap[north-east logo]
@@ -40,7 +40,7 @@ On ne parlera pas de ...
  - Algorithmes de consensus (PoW, PoS, DPoS,...)
  - Plateformes d'échanges
  - Comment miner de la crypto monnaie	
- - Comment devenir @color[#e49436](crypto millionaire) ! @fa[smile-o fa-1x]
+ - Comment devenir @color[red](crypto millionaire) ! @fa[smile-o fa-1x]
 @ulend
  
 ---
@@ -48,7 +48,7 @@ On ne parlera pas de ...
 ### Objectifs
  
  - Rappels (Blockchain, Mineurs, ...)
- - Introduction à la blockchain *Ethereum*
+ - Introduction à la blockchain **Ethereum**
  - Les Smart Contracts : Création, déploiement, fonctionnement.
  - Modélisation et maitrise de leur consommation.
  
@@ -61,7 +61,7 @@ On ne parlera pas de ...
  - Blockchain : Structure de données simple 
  - La technologie Blockchain : « Base de données » sécurisées et décentralisées. 
 
-@snap[south-west]
+@snap[south-east]
 @size[0.5em](Démo : https://anders.com/blockchain/)
 @snapend
 
@@ -71,7 +71,7 @@ On ne parlera pas de ...
 
 ### Rappels : Les mineurs
 
-@snap[north-east ethermap]
+@snap[north-east logo]
 ![8xrig](images/8xgpu-mining-rig-open-air-frame.png)
 @snapend
 
@@ -90,19 +90,28 @@ On ne parlera pas de ...
 
 @quote[Protocole d'échanges décentralisés permettant la création par les utilisateurs de contrats intelligents grâce à un langage Turing-complet.](Wikipedia)
 
-@size[0.5em](
+---
+
+### Ethereum
+@snap[north-east logo]
+![LogoEthereum](images/logo-ethereum.png)
+@snapend
+
   - Blockchain de *seconde génération*
   - Développée par *Vitalik Buterin*, lancée en juillet 2015.
   - Fréquence moyenne des blocs : 14-15 secondes
   - Symbole boursier : *ETH*
   - Quantité maximale : non limitée
   - Taille des blocs : dynamique
-)
+
 Note:
   - Vitalin et aussi Gavin Wood, Joseph Lubin
 
+
 ---
-@snap[west span-100]
+
+---
+@snap[north-west span-100]
 @size[1.2em](L’infrastructure Ethereum)
 @snapend
 
@@ -114,7 +123,7 @@ Note:
 ![Europe](images/eth2.png)
 @snapend
 
-@snap[south-west span-100]
+@snap[south-eest span-100]
 @size[0.3em](Source: https://twitter.com/peter_szilagyi/status/887272506914213888 - 18/07/2017)
 @snapend
 
@@ -128,8 +137,8 @@ Note:
 ---?image=images/Ethernodes.org.2018-10-28.png&size=contain
 @title[Ethernodes (web)]
 
-@snap[south-east span-40]
-@size[0.3em](https://www.ethernodes.org)
+@snap[east span-30]
+@size[0.2em](https://www.ethernodes.org)
 @snapend
 
 --- 
@@ -185,7 +194,7 @@ PUSH1 0x40 SWAP1 DUP2 MSTORE SWAP1 MLOAD PUSH1..."
 ```
 ---
 
-### Le langage Solidity en bref
+#### Le langage Solidity en bref
 
 @snap[north-east logo]
 ![LogoSolidity](images/logo-solidity.jpg)
@@ -228,8 +237,7 @@ contract ZRXToken is UnlimitedAllowanceToken {
 
     function ZRXToken() {
         balances[msg.sender] = totalSupply;
-    }
-}
+...
 ```
 
 ---
@@ -256,7 +264,6 @@ contract Nexium {
 @snapend
 
 ---
-
 ### EVM
 
 _Ethereum Virtual Machine_
@@ -268,8 +275,6 @@ _Ethereum Virtual Machine_
  - Émule une machine 256 bits avec des pseudo-registres
  - Registres émulés par une *stack* virtuel
 
-![EVM](images/compressed_evm.png)
-
 Note:
   - In computing, a machine is said to be Turing complete if it can solve any
     problem that a Turing machine can, given an appropriate algorithm, the necessary time and memory.
@@ -277,13 +282,19 @@ Note:
   - https://www.mayowatudonu.com/blockchain/deep-dive-into-evm-intro
 
 ---
+### EVM
+
+![EVM](images/compressed_evm.png)
+
+---
+
 
 ### Ethereum et unités de mesure
 
  - **Ether** (ETH) : le nom de la crypto monnaie
  - **Wei** : une fraction d'Ether (1 ETH = 10^18 Wei)
  - **GAS** : unité de mesure en terme de quantité de calcul 
- - **GAS price** : défini le prix (en Wei) que vous êtes prêt a payer au mineur.
+ - **GAS price** : défini le prix (en GWei) que vous êtes prêt à payer au mineur.
  - **GAS limit** : Quantité maximum de gas que vous êtes prêt à payer pour une transaction.
  
 ---
@@ -304,7 +315,7 @@ Note:
 ### En résumé...
 
  - Fixer un *GAS limit* évite de dépenser une fortune en cas de problème dans un Smart Contract (ex: boucle infinie).
- - La quantité de GAS requis est défini par la quantité d'instructions exécuté sur la blockchain.
+ - La quantité de GAS requise est défini par la quantité d'instructions exécuté sur la blockchain.
  - Fixer un *GAS limit* trop petit a peu d'intérêt.
 
 Note: 
@@ -312,7 +323,7 @@ Note:
 
 ---
 
-### Coûts des instructions : Exemples
+### Coût des instructions : Exemples
 
 ![GasCost1](images/evm-opcode-gas-cost-1.png)
 ![GasCost2](images/evm-opcode-gas-cost-2.png)
@@ -324,7 +335,7 @@ Note:
 
 ---
 
-### Coûts d'une transaction
+### Coût d'une transaction
 
  - Le coût total d'une transaction = *GAS_price x GAS_used* 
  - Les mineurs donne priorité aux transactions avec un *GAS_price* élevé.
@@ -342,8 +353,8 @@ Note:
 
 ### Performances actuelles 
 
- - **block time 15 sec**, blocks/min 4
- - block/day 5959, block/year 2 174 897
+ - **block time 15 sec**, 4 blocks/min
+ - 5959 block/day, 2 174 897 block/year  
  - **Block Gas limit 8 000 000**
  - Daily Gas cap 47 668 965 517
  - avg gas/tx 76 364
@@ -379,11 +390,11 @@ Note:
  - On y stock le hash du fichier seulement (Proof-of-existence)
 ---
 
-### 448.000 USD / GBytes
+### 448 000 USD / GBytes
 
 (novembre 2018)
 
----?image=images/clark-howard-253013121&size=contain
+---?image=images/clark-howard-253013121.jpg&size=contain
 @title[90's phones]
 
 ---
