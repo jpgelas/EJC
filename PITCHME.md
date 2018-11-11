@@ -298,13 +298,9 @@ Note:
 ![GasCost2](images/evm-opcode-gas-2.png)
 
 Note: 
- - Lu ailleur : 4 700 000 gas/block (28/juin/2017)
- - ADD = 3 GAS ; MUL = 5 GAS
- - MLOAD / MSTORE : TODO
- - SLOAD / SSTORE : TODO
- - Transaction simple : 21000 GAS
  - Limite de GAS par bloc : 8 000 000 GAS
-
+ - Lu ailleur : 4 700 000 gas/block (28/juin/2017)
+ - Transaction simple : 21000 GAS
 
 ---
 
@@ -322,7 +318,7 @@ Note:
 @title[Ethereum blocks usage]
 ---
 
-### Performances actuelles
+### Performances actuelles 
 
  - block (slot) time  15 sec, blocks/min 4
  - block/day 5959, block/year 2 174 897
@@ -349,15 +345,17 @@ Note:
 
 ### En résumé pour le stockage...
 
-  Par conception on est limité par 
+  Par conception on est limité par :  
   - la capacité de stockage des noeuds
-  - le débit limité (90 kB / 15 sec => 50 kbits/s)
+  - le débit (90 kB / 15 sec => 50 kbits/s)
   - le prix du GAS qui fluctue en fonction de l'Ether
-  - ~200.000 EUR / GBytes
+  
+  - *SSTORE* : 20.000 GAS/Word -> 640.000 GAS/KB
+  - 3,5 GWei / GAS -> 0,00224 ETH/KB
+  - 200 $/ETH -> 0,448 $/KB, 448 $/MB, *448.000 $/GB*
 
 Note:
  - On y stock le hash du fichier seulement (Proof-of-existence)
- 
 
 ---?image=images/clark-howard-253013121&size=contain
 @title[90's phones]
@@ -420,4 +418,5 @@ Cette présentation est disponible sur https://gitpitch.com/jpgelas/EJC
  - Ethernodes (28/10/2018 -> 13320 nodes) : https://www.ethernodes.org/network/1
  - https://www.etherchain.org/charts/averageBlockUtilization
  - https://etherscan.io/
+ - https://medium.com/coinmonks/storing-on-ethereum-analyzing-the-costs-922d41d6b316
 
