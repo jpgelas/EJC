@@ -78,8 +78,11 @@ On ne parlera pas de ...
   - Héberge une copie de la blockchain
   - Ajoutent de nouvelles liste de transactions (*i.e.* des blocs) à la chaine.
   - Vérifient l’intégrité de la blockchain
-  - Génèrent de nouveaux *coins* (par rétribution)
+  - Génèrent de nouveaux *coins* 
   - (Exécutent les Smart Contracts) 
+
+Note:
+  - Génèrent de nouveaux *coins* (par rétribution)
 
 ---
 
@@ -100,9 +103,9 @@ On ne parlera pas de ...
   - Blockchain de *seconde génération*
   - Développée par *Vitalik Buterin*, lancée en juillet 2015.
   - Fréquence moyenne des blocs : 14-15 secondes
+  - Taille des blocs : dynamique
   - Symbole boursier : *ETH*
   - Quantité maximale : non limitée
-  - Taille des blocs : dynamique
 
 Note:
   - Vitalin et aussi Gavin Wood, Joseph Lubin
@@ -196,7 +199,7 @@ PUSH1 0x40 SWAP1 DUP2 MSTORE SWAP1 MLOAD PUSH1..."
 ```
 ---
 
-#### Le langage Solidity en bref
+#### Le langage Solidity
 
 @snap[north-east logoeth]
 ![LogoSolidity](images/logo-solidity.jpg)
@@ -274,7 +277,7 @@ contract Nexium {
 
 ### Ethereum Virtual Machine
 
- - (quasi-) Turing complete machine
+ - Machine (quasi-) Turing complete.
  - Environnement d'exécution des Smart Contracts
  - Émule une machine 256 bits avec des pseudo-registres
  - Registres émulés par une *stack* virtuel
@@ -337,16 +340,20 @@ Note:
 
 ### Coût d'une transaction
 
- - Le coût total d'une transaction = *GAS_price x GAS_used* 
- - Les mineurs donne priorité aux transactions avec un *GAS_price* élevé.
+ - Coût total d'une transaction = *GAS_price &ast; GAS_used*
+ - Priorité aux transactions avec un *GAS_price* élevé.
  - Plus l'utilisateur est prêt à payer, plus vite la transaction sera traitée.
  
+
+Note:
+  - Les mineurs donnent priorités aux transaction avec un GAS price élevé.
+
 ---?image=images/tx_pool_infographic.png&size=contain
 @title[MyEtherWallet]
+
 @snap[east span-30]
 @size[0.3em](https://www.myetherwallet.com)
 @snapend
-
 
 ---?image=images/ethgasstation-10.2018.png&size=contain
 @title[EthGasStation (web)]
@@ -449,7 +456,7 @@ Note:
    - l'exécution et l'accès sans censure possible. 
  - Important d'analyser un Smart Contract en terme de consommation de GAS pour maitriser le coût operationnel.
 
- - Maximiser les calculs et le sockage *offchain*.
+ - Maximiser les calculs et le stockage *offchain*.
 
 ---
 
@@ -465,11 +472,13 @@ Cette présentation est disponible sur https://gitpitch.com/jpgelas/EJC
 ---
 
 ### Liens utiles
-
+@ul[list-long-items](false)
  - https://hackernoon.com/ether-purchase-power-df40a38c5a2f
  - OPCODE list + GAS : https://docs.google.com/spreadsheets/d/1m89CVujrQe5LAFJ8-YAUCcNK950dUzMQPMJBxRtGCqs/edit#gid=0
  - Ethernodes (28/10/2018 -> 13320 nodes) : https://www.ethernodes.org/network/1
  - https://www.etherchain.org/charts/averageBlockUtilization
  - https://etherscan.io/
  - https://medium.com/coinmonks/storing-on-ethereum-analyzing-the-costs-922d41d6b316
+@ulend
+
 
