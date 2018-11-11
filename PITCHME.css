@@ -7,5 +7,12 @@
 .logo img {
   width: 50%;
   border: none !important;
+  box-shadow: none !important;
+}
+
+.logoeth img {
+  width: 20%;
+  border: none !important;
+  box-shadow: none !important;
 }
 

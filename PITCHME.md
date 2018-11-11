@@ -71,7 +71,7 @@ On ne parlera pas de ...
 
 ### Rappels : Les mineurs
 
-@snap[north-east logo]
+@snap[south-east logo]
 ![8xrig](images/8xgpu-mining-rig-open-air-frame.png)
 @snapend
 
@@ -84,7 +84,7 @@ On ne parlera pas de ...
 ---
 
 ### Ethereum
-@snap[north-east logo]
+@snap[north-east logoeth]
 ![LogoEthereum](images/logo-ethereum.png)
 @snapend
 
@@ -93,7 +93,7 @@ On ne parlera pas de ...
 ---
 
 ### Ethereum
-@snap[north-east logo]
+@snap[north-east logoeth]
 ![LogoEthereum](images/logo-ethereum.png)
 @snapend
 
@@ -107,12 +107,11 @@ On ne parlera pas de ...
 Note:
   - Vitalin et aussi Gavin Wood, Joseph Lubin
 
-
----
-
 ---
 @snap[north-west span-100]
 @size[1.2em](L’infrastructure Ethereum)
+<br>
+@size[0.5em](27500 nœuds contre 7000 pour Bitcoin)
 @snapend
 
 @snap[west ethermap]
@@ -123,12 +122,12 @@ Note:
 ![Europe](images/eth2.png)
 @snapend
 
-@snap[south-eest span-100]
+@snap[south span-100]
 @size[0.3em](Source: https://twitter.com/peter_szilagyi/status/887272506914213888 - 18/07/2017)
 @snapend
 
 Note:
-  - 27500 nœuds contre 7000 pour Bitcoin (31/5/2017)
+  - 7000 pour Bitcoin (31/5/2017)
   - green = @golang geth, 
   - orange = @rustlang parity, 
   - white = everything else.
@@ -138,17 +137,16 @@ Note:
 @title[Ethernodes (web)]
 
 @snap[east span-30]
-@size[0.2em](https://www.ethernodes.org)
+@size[0.3em](https://www.ethernodes.org)
 @snapend
 
 --- 
 
 ### Smart Contract
 
-@snap[north-east logo]
+@snap[north-east logoeth]
 ![LogoSmartContract](images/smartcontract.png)
 @snapend
-
 
  - Programme autonome
  - Déployé et répliqué 
@@ -164,6 +162,10 @@ Note:
 ---
 
 ### Smart Contract @size[0.3em](_suite_)
+
+@snap[north-east logoeth]
+![LogoSmartContract](images/smartcontract.png)
+@snapend
 
  - Du *bytecode* stocké dans la blockchain
  - Rédigé dans un langage de haut niveau : *Solidity*
@@ -196,7 +198,7 @@ PUSH1 0x40 SWAP1 DUP2 MSTORE SWAP1 MLOAD PUSH1..."
 
 #### Le langage Solidity en bref
 
-@snap[north-east logo]
+@snap[north-east logoeth]
 ![LogoSolidity](images/logo-solidity.jpg)
 @snapend
 
@@ -264,11 +266,13 @@ contract Nexium {
 @snapend
 
 ---
-### EVM
-
-_Ethereum Virtual Machine_
+### Ethereum Virtual Machine
 
 ![EVM](images/compressed_evm.png)
+
+---
+
+### Ethereum Virtual Machine
 
  - (quasi-) Turing complete machine
  - Environnement d'exécution des Smart Contracts
@@ -281,13 +285,8 @@ Note:
   - Pour l'EVM le paramètre limitant est le GAS.
   - https://www.mayowatudonu.com/blockchain/deep-dive-into-evm-intro
 
----
-### EVM
-
-![EVM](images/compressed_evm.png)
 
 ---
-
 
 ### Ethereum et unités de mesure
 
@@ -314,16 +313,17 @@ Note:
 
 ### En résumé...
 
- - Fixer un *GAS limit* évite de dépenser une fortune en cas de problème dans un Smart Contract (ex: boucle infinie).
- - La quantité de GAS requise est défini par la quantité d'instructions exécuté sur la blockchain.
+ - Fixer un *GAS limit* évite de dépenser une fortune en cas de problème. 
+ - La quantité de GAS requise est défini par la quantité d'instructions exécutées.
  - Fixer un *GAS limit* trop petit a peu d'intérêt.
 
 Note: 
  - https://kb.myetherwallet.com/gas/what-is-gas-ethereum.html   
+ - Ex: boucle infinie.
 
 ---
 
-### Coût des instructions : Exemples
+### Coût des instructions 
 
 ![GasCost1](images/evm-opcode-gas-cost-1.png)
 ![GasCost2](images/evm-opcode-gas-cost-2.png)
@@ -343,6 +343,10 @@ Note:
  
 ---?image=images/tx_pool_infographic.png&size=contain
 @title[MyEtherWallet]
+@snap[east span-30]
+@size[0.3em](https://www.myetherwallet.com)
+@snapend
+
 
 ---?image=images/ethgasstation-10.2018.png&size=contain
 @title[EthGasStation (web)]
@@ -394,8 +398,13 @@ Note:
 
 (novembre 2018)
 
----?image=images/clark-howard-253013121.jpg&size=contain
+---?image=images/clark-howard_253013121.jpg&size=contain
 @title[90's phones]
+
+
+---
+
+### Outils de développement
 
 ---
 
@@ -423,9 +432,11 @@ Note:
 ### Transaction (détail)
 ![GanacheTX-detail](images/ganache-transaction-detail.png)
 
+---?image=images/etherscan.png&size=contain
+@title[Etherscan snapshot]
+
 ---?image=images/remix-snapshot.png&size=contain
 @title[Remix snapshot]
-
 
 
 ---
