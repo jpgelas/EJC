@@ -9,7 +9,7 @@ Université Lyon 1/LIRIS/INRIA/ENS Lyon
 
 ---
 @snap[north-west span-50]
-@size[1.5em](`jp@ejc2018:~$ @color[blue](whoami)`)
+@size[1.3em](`jp@ejc2018:~$` @color[blue](`whoami`))
 @snapend
 
 @snap[north-east logo]
@@ -57,7 +57,7 @@ https://blog.picks.co/pow-is-efficient-aa3d442754d3
  - Rappels (Blockchain, Mineurs, ...)
  - Introduction à la blockchain **Ethereum**
  - Les Smart Contracts : Création, déploiement, fonctionnement.
- - Modélisation et maitrise de leur consommation.
+ - Modélisation et maîtrise de leur consommation.
  
 
 ---
@@ -83,7 +83,7 @@ https://blog.picks.co/pow-is-efficient-aa3d442754d3
 @snapend
 
   - Héberge une copie de la blockchain
-  - Ajoutent de nouvelles liste de transactions (*i.e.* des blocs) à la chaine.
+  - Ajoutent de nouvelles liste de transactions (*i.e.* des blocs) à la chaîne.
   - Vérifient l’intégrité de la blockchain
   - Génèrent de nouveaux *coins* 
   - (Exécutent les Smart Contracts) 
@@ -181,7 +181,7 @@ Note:
  - Du *bytecode* stocké dans la blockchain
  - Rédigé dans un langage de haut niveau : *Solidity*
  - Compilé (*solc*)
- - Accessible via une adresse codé sur *160 bits*
+ - Accessible via une adresse codée sur *160 bits*
  - Exécuté dans l'*Ethereum Virtual Machine* (EVM)
 <br/>
 <br/>
@@ -457,7 +457,7 @@ Note:
 
 ---?image=images/remix-snapshot.png&size=contain
 @title[Remix snapshot]
-#### Remix IDE
+### Remix 
 
 ---
 
