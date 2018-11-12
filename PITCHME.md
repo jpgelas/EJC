@@ -8,6 +8,7 @@ Université Lyon 1/LIRIS/INRIA/ENS Lyon
 @size[0.8em](Entretiens Jacques Cartier, 12-13 novembre 2018, ENS Lyon)
 
 ---
+@title[who am i]
 @snap[north-west span-50]
 @size[1.3em](`jp@ejc2018:~$` @color[blue](`whoami`))
 @snapend
@@ -391,7 +392,8 @@ Note:
 
 ---
 
-### En résumé : Pour le calcul...
+### En résumé : Pour le calcul... @fa[microchip fa-1x] 
+
 
   - L'infrastructure Ethereum est un énorme ordinateur Turing complet distribué
   - Ultra tolérant aux pannes
@@ -400,9 +402,9 @@ Note:
 
 ---
 
-### En résumé : Pour le stockage...
+### En résumé : Pour le stockage... @fa[database fa-1x] 
 
-  Par conception on est limité par :  
+  On est limité par conception à :  
   - la capacité de stockage des noeuds
   - le débit (90 kB / 15 sec => 50 kbits/s)
   - le prix du GAS qui fluctue en fonction de l'Ether
