@@ -5,18 +5,18 @@
 }
 
 .logo img {
-  width: 50%;
+  width: 60%;
   border: none !important;
   box-shadow: none !important;
 }
 
 .logoeth img {
-  width: 20%;
+  width: 30%;
   border: none !important;
   box-shadow: none !important;
 }
 
 .reveal ul.list-long-items li {
-   font-size: 0.4em;
+   font-size: 0.5em;
 }
 

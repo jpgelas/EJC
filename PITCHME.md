@@ -9,7 +9,7 @@ Université Lyon 1/LIRIS/INRIA/ENS Lyon
 
 ---
 @snap[north-west span-50]
-@size[1.3em](jp@ejc2018:~$ @color[blue](whoami))
+@size[1.5em](`jp@ejc2018:~$ @color[blue](whoami)`)
 @snapend
 
 @snap[north-east logo]
@@ -43,6 +43,13 @@ On ne parlera pas de ...
  - Comment devenir @color[red](crypto millionaire) ! @fa[smile-o fa-1x]
 @ulend
  
++++
+### Comparatif
+
+![Gold Mining](images/goldmining.png)
+<br/>
+https://blog.picks.co/pow-is-efficient-aa3d442754d3
+
 ---
 
 ### Objectifs
@@ -55,7 +62,7 @@ On ne parlera pas de ...
 
 ---
 
-### Rappels : Blockchain
+### Blockchain
 
 ![blockchain](images/blockchain.png)
  - Blockchain : Structure de données simple 
@@ -69,7 +76,7 @@ On ne parlera pas de ...
 
 ---
 
-### Rappels : Les mineurs
+### Les mineurs
 
 @snap[south-east logo]
 ![8xrig](images/8xgpu-mining-rig-open-air-frame.png)
@@ -112,7 +119,7 @@ Note:
 
 ---
 @snap[north-west span-100]
-@size[1.2em](L’infrastructure Ethereum)
+@size[1.3em](L’infrastructure Ethereum)
 <br>
 @size[0.5em](27500 nœuds contre 7000 pour Bitcoin)
 @snapend
@@ -139,7 +146,7 @@ Note:
 ---?image=images/Ethernodes.org.2018-10-28.png&size=contain
 @title[Ethernodes (web)]
 
-@snap[east span-30]
+@snap[west span-30]
 @size[0.3em](https://www.ethernodes.org)
 @snapend
 
@@ -161,6 +168,7 @@ Note:
     préalable et inscrites dans la blockchain.
   - Déployé et répliqué sur la même infrastructure de calcul qui héberge et
     mine la blockchain Ethereum.
+  - Résultat de l'exécution déterministe.
  
 ---
 
@@ -246,7 +254,7 @@ contract ZRXToken is UnlimitedAllowanceToken {
 ```
 
 ---
-### Nexium (NXC) token (ERC-20)
+### Nexium (NxC) token (ERC-20)
 ```
 contract Nexium { 
 	...
@@ -279,7 +287,7 @@ contract Nexium {
 
  - Machine (quasi-) Turing complete.
  - Environnement d'exécution des Smart Contracts
- - Émule une machine 256 bits avec des pseudo-registres
+ - Émule une machine *256 bits* avec des pseudo-registres
  - Registres émulés par une *stack* virtuel
 
 Note:
@@ -294,7 +302,7 @@ Note:
 ### Ethereum et unités de mesure
 
  - **Ether** (ETH) : le nom de la crypto monnaie
- - **Wei** : une fraction d'Ether (1 ETH = 10^18 Wei)
+ - **Wei** : une fraction d'Ether (1 ETH = 10<sup>18</sup> Wei)
  - **GAS** : unité de mesure en terme de quantité de calcul 
  - **GAS price** : défini le prix (en GWei) que vous êtes prêt à payer au mineur.
  - **GAS limit** : Quantité maximum de gas que vous êtes prêt à payer pour une transaction.
@@ -314,10 +322,10 @@ Note:
 
 ---
 
-### En résumé...
+### Remarques
 
  - Fixer un *GAS limit* évite de dépenser une fortune en cas de problème. 
- - La quantité de GAS requise est défini par la quantité d'instructions exécutées.
+ - La quantité de GAS requise est définie par la quantité d'instructions exécutées.
  - Fixer un *GAS limit* trop petit a peu d'intérêt.
 
 Note: 
@@ -358,8 +366,12 @@ Note:
 ---?image=images/ethgasstation-10.2018.png&size=contain
 @title[EthGasStation (web)]
 
+Note:
+  - Calcul du GAS price moyen sur les 1500 derniers blocs (+ de 6h)
+
 ---?image=images/chart.png&size=contain
 @title[Ethereum blocks usage]
+
 ---
 
 ### Performances actuelles 
@@ -368,10 +380,10 @@ Note:
  - 5959 block/day, 2 174 897 block/year  
  - **Block Gas limit 8 000 000**
  - Daily Gas cap 47 668 965 517
- - avg gas/tx 76 364
- - tx/day cap 624 236
- - tx/min 433
- - **tx/sec 7**
+ - 76 364 avg gas/tx 
+ - 624 236 tx/day cap  
+ - 433 tx/min
+ - **7 tx/sec**
 
 Note:
   - VISA annonce 24000 tx/sec -> 1700 en réalité
@@ -383,7 +395,8 @@ Note:
 
   - L'infrastructure Ethereum est un énorme ordinateur Turing complet distribué
   - Ultra tolérant aux pannes
-  - Trés mal exploité car tous les noeuds exécutent les mêmes instructions avec les même données.
+  - Trés mal exploité car tous les noeuds exécutent les mêmes instructions avec les même données @fa[meh-o fa-1x]
+
 
 ---
 
@@ -402,7 +415,7 @@ Note:
 ---
 
 ### 448 000 USD / GBytes
-
+#### ~45 heures
 (novembre 2018)
 
 ---?image=images/clark-howard_253013121.jpg&size=contain
@@ -436,7 +449,7 @@ Note:
 
 ---
 
-### Transaction (détail)
+### Transaction  @size[0.3em](_détail_)
 ![GanacheTX-detail](images/ganache-transaction-detail.png)
 
 ---?image=images/etherscan.png&size=contain
@@ -444,7 +457,7 @@ Note:
 
 ---?image=images/remix-snapshot.png&size=contain
 @title[Remix snapshot]
-
+#### Remix IDE
 
 ---
 
@@ -454,13 +467,12 @@ Note:
  - Par conception la blockchain Ethereum garantie :
    - l'immutabilité des données,
    - l'exécution et l'accès sans censure possible. 
- - Important d'analyser un Smart Contract en terme de consommation de GAS pour maitriser le coût operationnel.
-
+ - Analyser un Smart Contract en terme de consommation de GAS pour maitriser le coût operationnel.
  - Maximiser les calculs et le stockage *offchain*.
 
 ---
 
-### Questions ?
+### @fa[question-circle-o fa-1x] Questions @fa[question-circle-o fa-1x] 
 
 Cette présentation est disponible sur https://gitpitch.com/jpgelas/EJC
 
